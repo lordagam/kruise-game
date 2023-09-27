@@ -56,7 +56,7 @@ jobs:
             if [ "$PODS" -eq "2" ]; then
               break
             fi
-            sleep 3
+            sleep 45
           done
           set +e
           PODS=$(kubectl get pod -n kruise-system | grep '1/1' | grep kruise-controller-manager | wc -l)
